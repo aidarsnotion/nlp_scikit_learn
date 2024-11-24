@@ -155,6 +155,21 @@ Text: 'The room was dirty, and I had to wait for hours to get assistance.' -> Po
 
 ---
 
+## Пример работы:
+
+```
+message_1 = 'Congratulations! You have won a $1000 gift card. Click here to claim.'
+message_2 = '''
+Hello John,
+I hope this message finds you well. I just wanted to follow up on our meeting last week regarding the project timeline. 
+Looking forward to your reply.
+'''
+```
+
+```
+Вероятность спама для сообщения 1: 0.9700
+Вероятность спама для сообщения 2: 0.5000
+```
 
 # Требуемые зависимости
 Перед запуском убедитесь, что установлены все необходимые библиотеки. Список необходимых пакетов в файле requirements.txt в корне проекта.
