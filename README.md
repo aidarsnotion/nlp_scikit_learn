@@ -20,11 +20,8 @@
 ```bash
 pip install tensorflow nltk
 ```
-## 
 
-Зависимости их версия имеется в файле requirements.txt
-
-# Результаты
+# Пример:
 
 Входдной текст:
 ```
