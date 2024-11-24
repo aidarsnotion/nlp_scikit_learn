@@ -24,6 +24,47 @@ pip install tensorflow nltk
 
 Зависимости их версия имеется в файле requirements.txt
 
+##
+Входдной текст 
+```
+[
+    "The quick brown fox",
+    "Jumps over $$$ the lazy brown dog",
+    "Who jumps high into the blue sky after counting 123",
+    "And quickly returns to earth"
+]
+```
+Обработанный текст
+```
+[
+    "quick brown fox",
+    "jumps lazy brown dog",
+    "jumps high blue sky",
+    "quickly returns earth"
+]
+
+```
+
+Индексы слов
+```
+{'quick': 1, 'brown': 2, 'fox': 3, 'jumps': 4, 'lazy': 5, 'dog': 6, 'high': 7, 'blue': 8, 'sky': 9, 'quickly': 10, 'returns': 11, 'earth': 12}
+```
+
+Числовые последовательности
+```
+[[1, 2, 3], [4, 5, 2, 6], [4, 7, 8, 9], [10, 11, 12]]
+```
+
+Дополненные последовательнос
+```
+[
+    [1, 2, 3, 0, 0],
+    [4, 5, 2, 6, 0],
+    [4, 7, 8, 9, 0],
+    [10, 11, 12, 0, 0]
+]
+```
+
 # Text Preprocessing with Tokenizer and NLTK
 
 This project demonstrates a complete text preprocessing pipeline for converting textual data into numerical sequences, which can be used as input for machine learning models, particularly neural networks. The process includes tokenization, removal of stop-words and numbers, and padding sequences to ensure uniform length.
