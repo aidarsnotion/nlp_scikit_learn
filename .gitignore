@@ -1,1 +1,13 @@
+<<<<<<< HEAD
 my_env/
+=======
+# Byte-compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+my_env/
+
+
+>>>>>>> deafe58 (Initial Commit)
