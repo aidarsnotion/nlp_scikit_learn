@@ -20,7 +20,9 @@
 ```bash
 pip install tensorflow nltk
 ```
+## 
 
+Зависимости их версия имеется в файле requirements.txt
 
 # Text Preprocessing with Tokenizer and NLTK
 
