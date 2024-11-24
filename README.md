@@ -24,44 +24,41 @@ pip install tensorflow nltk
 
 Зависимости их версия имеется в файле requirements.txt
 
-##
-Входдной текст 
+# Результаты
+
+Входдной текст:
 ```
-[
+lines = [
     "The quick brown fox",
     "Jumps over $$$ the lazy brown dog",
     "Who jumps high into the blue sky after counting 123",
     "And quickly returns to earth"
 ]
 ```
-Обработанный текст
+Обработанный текст:
 ```
-[
-    "quick brown fox",
-    "jumps lazy brown dog",
-    "jumps high blue sky",
-    "quickly returns earth"
-]
+['quick brown fox', 'jumps lazy brown dog', 'jumps high blue sky counting', 'quickly returns earth']
 
 ```
 
-Индексы слов
+Индексы слов:
+
 ```
 {'quick': 1, 'brown': 2, 'fox': 3, 'jumps': 4, 'lazy': 5, 'dog': 6, 'high': 7, 'blue': 8, 'sky': 9, 'quickly': 10, 'returns': 11, 'earth': 12}
 ```
 
-Числовые последовательности
+Числовые последовательности:
 ```
-[[1, 2, 3], [4, 5, 2, 6], [4, 7, 8, 9], [10, 11, 12]]
+[[3, 1, 4], [2, 5, 1, 6], [2, 7, 8, 9, 10], [11, 12, 13]]
 ```
 
-Дополненные последовательнос
+Выравненные последовательности:
 ```
 [
-    [1, 2, 3, 0, 0],
-    [4, 5, 2, 6, 0],
-    [4, 7, 8, 9, 0],
-    [10, 11, 12, 0, 0]
+ [ 3  1  4  0  0]
+ [ 2  5  1  6  0]
+ [ 2  7  8  9 10]
+ [11 12 13  0  0]
 ]
 ```
 
