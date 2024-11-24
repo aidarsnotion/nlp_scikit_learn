@@ -95,34 +95,44 @@ lines = [
 
 ## Пример работы
 Пример ввода нового текста и анализа его тональности:
+
+Оценка вероятности тональности для нового отзыва
 ```python
-review = 'The long lines and poor customer service really turned me off.'
-probability = model.predict_proba(vectorizer.transform([review]))[0][1]
-print(f"Вероятность положительного отзыва: {probability:.2f}")
+# Положительные примеры
+positive_texts = [
+    "The food was delicious and the staff was very friendly.",
+    "I loved the ambiance, and the service was excellent!"
+]
+
+for text in positive_texts:
+    prob = model.predict_proba(vectorizer.transform([text]))[0][1]
+    print(f"Text: '{text}' -> Positive probability: {prob}")
+
+# Отрицательные примеры
+negative_texts = [
+    "The customer service was rude and the food was undercooked.",
+    "The room was dirty, and I had to wait for hours to get assistance."
+]
+
+for text in negative_texts:
+    prob = model.predict_proba(vectorizer.transform([text]))[0][1]
+    print(f"Text: '{text}' -> Positive probability: {prob}")
+```
+
+Результат анализа:
+```
+Text: 'The food was delicious and the staff was very friendly.' -> Positive probability: 0.5791591375349925
+Text: 'I loved the ambiance, and the service was excellent!' -> Positive probability: 0.8430843825114044
+Text: 'The customer service was rude and the food was undercooked.' -> Positive probability: 0.3708245366954655
+Text: 'The room was dirty, and I had to wait for hours to get assistance.' -> Positive probability: 0.4325179343151567
 ```
 
 
-#
+# Требуемые зависимости
+Перед запуском убедитесь, что установлены все необходимые библиотеки. Список необходимых пакетов в файле requirements.txt в корне проекта.
 
-# Text Preprocessing with Tokenizer and NLTK
-
-This project demonstrates a complete text preprocessing pipeline for converting textual data into numerical sequences, which can be used as input for machine learning models, particularly neural networks. The process includes tokenization, removal of stop-words and numbers, and padding sequences to ensure uniform length.
-
-## Features
-
-- **Text Cleaning**: Converts text to lowercase, removes stop-words, and filters out non-alphabetic tokens (e.g., numbers, symbols).
-- **Tokenization**: Converts cleaned text into sequences of numerical indices using TensorFlow's `Tokenizer`.
-- **Padding**: Ensures all sequences have the same length using `pad_sequences`.
-
-## Requirements
-
-The script uses the following Python libraries:
-
-- `tensorflow` (for `Tokenizer` and `pad_sequences`)
-- `nltk` (for tokenization and stop-word removal)
-
-Install the dependencies using:
-
-```bash
-pip install tensorflow nltk
+Все пакеты из requirements.txt можно установить одним махом: 
+```
+pip install -r requirements.txt
+```
 
